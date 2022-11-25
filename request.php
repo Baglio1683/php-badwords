@@ -22,9 +22,13 @@
     <?php echo strlen($phrase); ?>
 
     <h2>La frase censurata è: </h2>
-    <?php echo $badWord; ?>
-    <h2>La lunghezza della frase censurata è </h2>
 
+    <?php
+    $newPhrase = str_replace($badWord, '***', $phrase);
+    echo $newPhrase;
+    ?>
+    <h2>La lunghezza della frase censurata è </h2>
+    <?php echo strlen($newPhrase); ?>
 
 
     <a href="index.php">Ritorna alla home</a>
